@@ -4,26 +4,33 @@ const QRCode = require('qrcode');
 
 async function register(req, res) {
   try {
+    console.log('hello')
     const body = req.body;
     const user = await db.User.create(body);
-    const qrCode = await generateQR(`http://localhost/${user.id}`);
-    user.setDataValue('qrcode', JSON.stringify(qrCode));
+    const qrCode = await generateQR(`http://localhost/tip/${user.id}`);
+    await user.update({ qrcode: qrCode })
     res.json(user)
     res.status = 201;
   } catch (err) {
-    res.body = err;
-    res.status = 500;
+    console.log(err);
+    res.status(500);
+    res.send({ err: err });
   };
 }
 
 async function login(req, res) {
+  console.log(typeof req.body.email)
   try {
-    const userObject = await db.User.findOne({ email: req.body.email })
+    const userObject = await db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    })
     console.log(userObject)
     userObject ? res.json(userObject) : 'entry not found'
   } catch (err) {
-    res.body = err;
-    res.status = 500;
+    res.status(500);
+    res.send({ err: err });
   }
 }
 
@@ -32,8 +39,23 @@ async function getAll(req, res) {
     res.send(await db.User.findAll());
     res.status = 200;
   } catch (err) {
-    res.body = err;
-    res.status = 500;
+    res.status(500);
+    res.send({ err: err });
+  }
+}
+
+async function getById(req, res) {
+  try {
+    const id = req.params
+    const user = await db.User.findOne({
+      where: {
+        id: id.id
+      }
+    })
+    res.send(user)
+  } catch (err) {
+    res.status(500);
+    res.send({ err: err });
   }
 }
 
@@ -47,4 +69,4 @@ async function generateQR(url) {
 
 
 
-module.exports = { register, getAll, login };
+module.exports = { register, getAll, login, getById };

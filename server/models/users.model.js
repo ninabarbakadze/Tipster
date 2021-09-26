@@ -1,6 +1,3 @@
-// const db = require('./model');
-
-
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     name: {
@@ -21,8 +18,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true
     },
     qrcode: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true
+    },
+    stripeId: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true
     }
   });
   return User;

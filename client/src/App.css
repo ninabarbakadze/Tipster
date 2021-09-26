@@ -1,0 +1,11 @@
+.image-upload-preview {
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  clip-path: circle(50% at 50% 50%);
+}
