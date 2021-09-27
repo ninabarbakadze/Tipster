@@ -1,5 +1,5 @@
-const User = require('../models/users.model.js');
-const db = require('../models/model')
+// const User = require('../models/users.model.js');
+const db = require('../models/model');
 
 const artistName = 'Asec';
 const email = 'hello.asec@gmail.com';

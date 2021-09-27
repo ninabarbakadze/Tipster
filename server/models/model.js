@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-const Tip = require('./tips.model')
+// const Tip = require('./tips.model');
 
 const config = {
   host: 'localhost',
@@ -22,8 +22,8 @@ for (const file of files) {
   }
 }
 
-db.User.hasMany(db.Tip, { as: 'tips' })
-db.Tip.belongsTo(db.User)
+db.User.hasMany(db.Tip, { as: 'tips' });
+db.Tip.belongsTo(db.User);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
