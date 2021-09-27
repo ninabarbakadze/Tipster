@@ -26,44 +26,47 @@ const CARD_OPTIONS = {
   }
 }
 
-export default function PaymentForm({ tip }) {
-  console.log(tip)
+export default function PaymentForm({ tip, user }) {
+  // console.log(tip)
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
 
+
+  console.log(tip);
+  console.log('coming from paymentForm', user);
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement)
     })
 
-
+    console.log('payment form gets strip id', user.stripeId)
 
     if (!error) {
-      try {
         const { id } = paymentMethod
-        const response = await axios.post("http://localhost:4000/payment", {
-          amount: tip.tip * 100,
-          id
-        })
-        if (response.data.success) {
-          console.log('successful payment')
-          setSuccess(true)
-        }
-      } catch (error) {
-        console.log('Error', error)
-      }
-    } else {
-      console.log(error.message)
+        fetch(`http://localhost:4000/payment`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({amount: tip * 100,
+            id,
+            artistId: user.stripeId})
+          })
+          .then(res => res.json())
+          .then(res => {
+            console.log(res)
+            if(res.success) setSuccess(true);
+          }).catch(error => console.log(error))
     }
   }
 
   console.log('paymentform tip', tip)
 
   return (
-    <>
+    <div>
       {!success ?
         <form onSubmit={handleSubmit}>
           <p>You are tipping {tip.tip}  euros</p>
@@ -77,6 +80,6 @@ export default function PaymentForm({ tip }) {
           <h2>Payment successful</h2>
         </div>
       }
-    </>
+    </div>
   )
 }

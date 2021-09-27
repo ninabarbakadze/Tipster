@@ -20,7 +20,6 @@
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.4",
     "dotenv": "^10.0.0",
-    "eslint": "^7.32.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "nodemon": "^2.0.12",
@@ -29,5 +28,9 @@
     "qrcode": "^1.4.4",
     "sequelize": "^6.6.5",
     "stripe": "^8.176.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.0"
   }
 }

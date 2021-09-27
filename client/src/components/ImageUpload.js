@@ -32,7 +32,7 @@ export default function ImageUpload({ setFile }) {
           {url && <img src={url} alt="preview" />}
           {!url && (
             <div className='center'>
-              <Button className='upload-button' type='button' onClick={pickedImageHandler}>+</Button>
+              <Button className='upload-button' type='button' onClick={pickedImageHandler}><span>+</span></Button>
             </div>
           )}
         </div>

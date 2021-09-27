@@ -3,10 +3,9 @@ const stripe = require('stripe')('sk_test_51JaGGqHCv9NHRvAHaBVrBnS5rnXQlUvBOwXQh
 
 async function payment (req, res) {
   console.log('here');
-  let { amount, id, stripeId } = req.body;
-  console.log(stripeId);
+  let { amount, id, artistId } = req.body;
   try {
-    console.log(amount);
+    // console.log('in try', stripeId);
     const payment = await stripe.paymentIntents.create({
       amount: amount,
       currency: 'USD',
@@ -14,7 +13,7 @@ async function payment (req, res) {
       payment_method: id,
       confirm: true,
       transfer_data: {
-        destination: 'acct_1JddEaQjUng43oMe',
+        destination: artistId,
       },
     });
     console.log('Payment', payment);

@@ -67,16 +67,17 @@ export default function Register({ user, setUser, ...props }) {
 
 
   return (
-    <div className="App">
+    <div className="register">
       <h1>Create an account</h1>
       <div>
-
         <form onSubmit={handleSubmit} className="form">
           <ImageUpload setFile={setFile} />
-          <input type="text" placeholder="Artist name" value={name} onChange={(e) => setName(e.target.value)}></input>
-          <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-          <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-          <button type="submit">Register</button>
+          <div className='registration-input'>
+            <input type="text" placeholder="Artist name" value={name} onChange={(e) => setName(e.target.value)}></input>
+            <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+            <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <button type="submit" className='register-button'><span>Register</span></button>
+          </div>
         </form>
       </div>
     </div>

@@ -1,11 +1,167 @@
-.image-upload-preview {
-  width: 12rem;
-  height: 12rem;
-  border: 1px solid #222;
+body {
+  background-color: #000;
+  font-family:  -apple-system, 
+BlinkMacSystemFont, sans-serif;
+  /* position: relative;
+  width: 375px;
+  height: 812px; */
+  color: white
+}
+
+.welcome {
+
+}
+
+.welcome h1, .Artist-dashboard h1 {
+  position: absolute;
+  width: 58px;
+  height: 24px;
+  left: 159px;
+  top: 16px;
+  font-family: SF Mono;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  text-align: center;
+  letter-spacing: -0.125em;
+  
+  color: #FFFFFF;
+}
+.welcome h2 {
+color: white;
+text-align: center;
+margin-top: 198px;
+margin-left: 63px;
+margin-right: 63px;
+font-size: 28px;
+margin-bottom: 48px;
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+}
+
+.welcome button {
+  width: 327px;
+height: 56px;
+background-color: white;
+font-family: SF Compact Display;
+margin-bottom: 20px;
+margin-left: 24px;
+margin-right: 24px;
+border: none;
+}
+
+.image-upload-preview{
+  margin-top: 20px;
+  margin-left: 150px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
+  align-items: center; 
+   margin-bottom: 1rem;
   clip-path: circle(50% at 50% 50%);
+}
+
+.welcome span {
+  font-weight: 800;
+  font-size: 16px;
+  font-family: SF Compact Display;
+}
+
+.register h1 {
+  color: white;
+  text-align: center;
+}
+.image-container button {
+  border: none;
+  background-color: #000;
+}
+
+.register span {
+  color: #222;
+  font-size: 40px;
+  font-weight: 100;
+}
+.register input {
+  width: 300px;
+height: 40px;
+margin-bottom: 25px;
+background: rgba(255, 255, 255, 0.15);
+border: none;
+padding: 8px 16px 8px 20px;
+}
+
+.registration-input {
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 8px 16px 8px 20px;
+
+}
+
+.register-button {
+  width: 327px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 20px;
+  /* margin-left: 21px; */
+  margin-top: 40px;
+  border: none;
+}
+
+.register-button span {
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+color: rgba(255, 255, 255, 0.4)
+}
+.artist-photo {
+  margin-top: 20px;
+  margin-left: 150px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+   margin-bottom: 1rem;
+  clip-path: circle(50% at 50% 50%);
+} 
+
+.artist-name {
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 28px;
+line-height: 33px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.start {
+  /* font-family: SF Compact Text; */
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+color: #fff;
+text-align: center;
+letter-spacing: -0.01em;
+width: 258px;
+height: 60px;
+margin-left: 40px;
+}
+
+.qr {
+  width: 140px;
+height: 140px;
+margin-left: 110px;
 }

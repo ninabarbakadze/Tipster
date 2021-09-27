@@ -6,13 +6,14 @@ export default function Welcome() {
 
 
   return (
-    <div className="App">
-      <h1>Get tipped by fans</h1>
+    <div className="welcome">
+      <h1>TIPSTER</h1>
+      <h2>Get tipped by fans</h2>
       <Link to='/register'>
-        <button>Get started</button>
+        <button><span>Get started</span></button>
       </Link>
       <Link to='/login'>
-        <button>Login</button>
+        <button><span>Login</span></button>
       </Link>
     </div>
   );

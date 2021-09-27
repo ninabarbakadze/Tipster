@@ -11,7 +11,7 @@ import StripeContainer from './components/StripeContainer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
-export default function App() {
+export default function App () {
   const [user, setUser] = useState();
   const [id, setId] = useState();
   const [tip, setTip] = useState(0);
@@ -21,12 +21,12 @@ export default function App() {
     if (user) window.localStorage.setItem('user', JSON.stringify(user));
   }, [user]);
 
-  function logOut() {
+  function logOut () {
     window.localStorage.clear()
   }
 
   // console.log('app', user);
-  console.log(user)
+  // console.log(user)
   return (
 
     <div className="App">
@@ -52,7 +52,7 @@ export default function App() {
           </Route>
         </Switch>
       </Router >
-      <button onClick={() => logOut()}>log out</button>
+      {/* <button onClick={() => logOut()}>log out</button> */}
     </div>
 
 

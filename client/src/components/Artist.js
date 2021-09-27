@@ -49,12 +49,12 @@ export default function Artist({ user, setUser }) {
   return (
 
     <div className="Artist-dashboard">
-      <p>tipster</p>
+      <h1>TIPSTER</h1>
       {user ? <>
-        <img src={user.photo} />
-        <p>{user.name}</p>
-        <p>To start receiving tips, share or print your QR code.</p>
-        <img src={user.qrcode} />
+        <img className='artist-photo' src={user.photo} alt='artist' />
+        <p className='artist-name'>{user.name}</p>
+        <p className='start'>To start receiving tips, share or print your QR code.</p>
+        <img className='qr' src={user.qrcode} alt='qrcode' />
         <StripeButton user={user}></StripeButton>
         <button >Share</button>
         <button>Print</button>
