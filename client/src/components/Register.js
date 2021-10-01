@@ -59,7 +59,7 @@ export default function Register({ user, setUser, ...props }) {
       .then(user => {
         console.log('createUser', user)
         setUser(user)
-        history.push('/artist')
+        history.push('/connect-to-stripe')
       })
   }
 
@@ -68,14 +68,14 @@ export default function Register({ user, setUser, ...props }) {
 
   return (
     <div className="register">
-      <h1>Create an account</h1>
+      <h1>CREATE AN ACCOUNT</h1>
       <div>
         <form onSubmit={handleSubmit} className="form">
           <ImageUpload setFile={setFile} />
           <div className='registration-input'>
             <input type="text" placeholder="Artist name" value={name} onChange={(e) => setName(e.target.value)}></input>
             <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-            <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
             <button type="submit" className='register-button'><span>Register</span></button>
           </div>
         </form>

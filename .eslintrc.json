@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "browser": true,
         "node": true,
@@ -16,11 +16,18 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "json"
     ],
+ "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "latest"
+    }
+},
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "single"],
         "space-before-function-paren": ["error", "always"],
     }
-};
+}

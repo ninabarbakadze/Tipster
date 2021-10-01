@@ -15,12 +15,12 @@ async function tip (req, res) {
   
 async function getTips (req, res) {
   try {
-    const userObject = await db.Tip.findOne({
+    const tipObject = await db.Tip.findAll({
       where: {
-        UserId: req.body.UserId
+        UserId: req.body.id
       }
     });
-    userObject ? res.json(userObject) : 'No tips yet';
+    tipObject ? res.json(tipObject) : 'No tips yet';
   } catch (err) {
     console.log(err);
     res.status(500);

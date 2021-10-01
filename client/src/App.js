@@ -1,20 +1,28 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-// import Nav from './components/Nav';
+import {useHistory} from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Register from './components/Register';
-import Artist from './components/Artist';
+import ArtistWelcome from './components/ArtistWelcome';
 import Login from './components/Login';
 import Tip from './components/Tip';
 import StripeContainer from './components/StripeContainer';
+import StripeConnect from './components/StripeConnect';
+import ArtistDashboard from './components/ArtistDashboard';
+import TipExtension from './components/TipExtention';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Stripe from 'stripe';
 
 
 export default function App () {
   const [user, setUser] = useState();
-  const [id, setId] = useState();
-  const [tip, setTip] = useState(0);
+  const [tip, setTip] = useState();
+  const [message, setMessage] = useState('');
+  
+  const history = useHistory();
+
+// console.log('from app', tip)
 
   useEffect(() => {
     if (window.localStorage.getItem('user') && !user) setUser(JSON.parse(window.localStorage.getItem('user')))
@@ -22,8 +30,11 @@ export default function App () {
   }, [user]);
 
   function logOut () {
-    window.localStorage.clear()
+    window.localStorage.clear();
+    // history.push('/')
   }
+
+  console.log(user)
 
   // console.log('app', user);
   // console.log(user)
@@ -37,8 +48,11 @@ export default function App () {
           <Route path="/register" >
             <Register setUser={setUser} user={user} />
           </Route>
-          <Route path="/artist" >
-            <Artist user={user} setUser={setUser} />
+          <Route path='/connect-to-stripe'>
+               <StripeConnect user={user}/>
+          </Route>
+          <Route path="/success" >
+            <ArtistWelcome user={user} setUser={setUser} />
           </Route>
           <Route path="/login">
             <Login setUser={setUser} user={user} />
@@ -49,6 +63,12 @@ export default function App () {
           </Route>
           <Route path='/tip' >
             <StripeContainer tip={tip} user={user} />
+          </Route>
+          <Route path='/artist'>
+            <ArtistDashboard user={user} logOut={logOut} />
+          </Route>
+          <Route path='/message'>
+            <TipExtension tip={tip} user={user} message={message} setMessage={setMessage}/>
           </Route>
         </Switch>
       </Router >

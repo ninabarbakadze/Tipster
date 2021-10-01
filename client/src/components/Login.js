@@ -30,12 +30,13 @@ export default function Login({ user, setUser }) {
   console.log('user', user)
 
   return (
-    <div className='Login'>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='login'>
+      <h1>TIPSTER</h1>
+      <h2>Log into your account.</h2>
+      <form classNAme='login-form' onSubmit={handleSubmit}>
         <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-        <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
-        <button type="submit">Login</button>
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+        <button type="submit"><span>Login</span></button>
       </form>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import PaymentSuccessful from './PaymentSuccessfull';
 import axios from 'axios';
 
 
@@ -10,23 +11,24 @@ const CARD_OPTIONS = {
   iconStyle: "solid",
   style: {
     base: {
-      iconColor: "#c4f0ff",
-      color: "#000000",
+      border: "none",
+      iconColor: "#76FA76",
+      color: "#FFF",
       fontWeight: 500,
-      fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
-      fontSize: "16px",
+      fontFamily: "SF Compact Display, Roboto, Open Sans, Segoe UI, sans-serif",
+      fontSize: "20px",
       fontSmoothing: "antialiased",
-      ":-webkit-autofill": { color: "#fce883" },
-      "::placeholder": { color: "#87bbfd" }
+      ":-webkit-autofill": { color: "#76FA76" },
+      "::placeholder": { color: "rgba(255, 255, 255, 0.6)" }
     },
     invalid: {
-      iconColor: "#ffc7ee",
-      color: "#ffc7ee"
+      iconColor: "#76FA76",
+      color: "#76FA76"
     }
   }
 }
 
-export default function PaymentForm({ tip, user }) {
+export default function PaymentForm({ tip, user}) {
   // console.log(tip)
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
@@ -64,22 +66,30 @@ export default function PaymentForm({ tip, user }) {
   }
 
   console.log('paymentform tip', tip)
+ 
+ 
 
   return (
-    <div>
-      {!success ?
+    
+    <div >
+    {!success ?  <>
+      <h1 className='form-header'>TIPSTER</h1>
+       <p className='form-amount'>Tipping ${tip} to: </p>
+       <img className='form-img' src={user.photo} alt='img'/>
+      <p className='form-name'>{user.name}</p>
         <form onSubmit={handleSubmit}>
-          <p>You are tipping {tip.tip}  euros</p>
           <fieldset className="FormGroup">
-            <CardElement options={CARD_OPTIONS} />
+            <div className='card-container'>
+            <CardElement className='stripe-card' options={CARD_OPTIONS} />
+            </div>
           </fieldset>
-          <button type="submit">Pay</button>
-        </form>
+          <button type="submit" className='tip-button'><span className='cintinue'>Tip ${tip}</span></button>
+        </form>  
+        </>
         :
-        <div>
-          <h2>Payment successful</h2>
-        </div>
-      }
+        (<div>
+          <PaymentSuccessful tip={tip} user={user} />
+        </div> ) }
     </div>
   )
 }

@@ -1,8 +1,9 @@
 import '../App.css';
 import React, { useEffect } from 'react';
-import StripeButton from './StripeButton';
+import Spinner from './Spinner';
 
-export default function Artist({ user, setUser }) {
+
+export default function ArtistWelcome({ user, setUser }) {
   console.log(user)
 
   /* const MobileShare = () => {
@@ -48,17 +49,16 @@ export default function Artist({ user, setUser }) {
 
   return (
 
-    <div className="Artist-dashboard">
-      <h1>TIPSTER</h1>
+    <div className="artist-dashboard">
       {user ? <>
+        <h1>TIPSTER</h1>
         <img className='artist-photo' src={user.photo} alt='artist' />
         <p className='artist-name'>{user.name}</p>
-        <p className='start'>To start receiving tips, share or print your QR code.</p>
+        <p className='start'>To start receiving tips, <br></br> share or print your QR code.</p>
         <img className='qr' src={user.qrcode} alt='qrcode' />
-        <StripeButton user={user}></StripeButton>
-        <button >Share</button>
-        <button>Print</button>
-      </> : <p>user loading</p>}
+        <button className='share'><span>Share  􀈂</span></button>
+        <button className='print'><span>Print  􀎚</span></button>
+      </> : <Spinner />}
 
     </div >
   );

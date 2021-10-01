@@ -11,6 +11,6 @@ router.post('/payment', payment);
 router.post('/onboard-user', onboardUser);
 router.post('/onboard-user/refresh', userRefresh);
 router.post('/tip', tip);
-router.get('/tipped-amount', getTips);
+router.post('/tipped-amount', getTips);
 
 module.exports = router;

@@ -7,7 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     message: {
       type: DataTypes.STRING,
       allowNull: true,
-    }
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   });
   return Tip;
 };

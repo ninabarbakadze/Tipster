@@ -9,6 +9,7 @@ export default function StripeButton({ user }) {
     // e.preventDefault()
     stripeSignUp()
   }
+  
   function stripeSignUp() {
     fetch("http://localhost:4000/onboard-user", {
       method: "POST",
@@ -19,11 +20,7 @@ export default function StripeButton({ user }) {
       .then(data => {
         if (data.url) {
           window.location = data.url;
-          // browserHistory.push("/path-to-link");
         } else {
-          // elmButton.removeAttribute("disabled");
-          // elmButton.textContent = "<Something went wrong>";
-          // console.log("data", data);
         }
       }).catch(err => {
         console.error(err);
@@ -31,9 +28,9 @@ export default function StripeButton({ user }) {
   }
 
   return (
-    <div>
-      <p>Set up your Stripe account to start receiving tips</p>
-      <button onClick={() => handleClick()}>Set up Payouts on Stripe</button>
+    <div className='stripe-button'>
+      <p>First, set up your payment method to receive tips.</p>
+      <button onClick={() => handleClick()}><span>Let's go</span></button>
     </div>
   );
 }

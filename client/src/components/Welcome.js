@@ -8,7 +8,7 @@ export default function Welcome() {
   return (
     <div className="welcome">
       <h1>TIPSTER</h1>
-      <h2>Get tipped by fans</h2>
+      <h2>Get tipped by fans.</h2>
       <Link to='/register'>
         <button><span>Get started</span></button>
       </Link>

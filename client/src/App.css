@@ -5,36 +5,29 @@ BlinkMacSystemFont, sans-serif;
   /* position: relative;
   width: 375px;
   height: 812px; */
-  color: white
+  color: white;
 }
 
 .welcome {
-
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
-.welcome h1, .Artist-dashboard h1 {
-  position: absolute;
+.welcome h1{
   width: 58px;
-  height: 24px;
-  left: 159px;
-  top: 16px;
+  margin-top: 20px;
   font-family: SF Mono;
   font-style: italic;
   font-weight: 900;
   font-size: 16px;
-  line-height: 150%;
-  /* identical to box height, or 24px */
-  text-align: center;
   letter-spacing: -0.125em;
-  
-  color: #FFFFFF;
 }
 .welcome h2 {
 color: white;
 text-align: center;
 margin-top: 198px;
-margin-left: 63px;
-margin-right: 63px;
 font-size: 28px;
 margin-bottom: 48px;
 font-family: SF Compact Display;
@@ -47,14 +40,14 @@ font-weight: 800;
 height: 56px;
 background-color: white;
 font-family: SF Compact Display;
-margin-bottom: 20px;
+margin-bottom: 16px;
 margin-left: 24px;
 margin-right: 24px;
 border: none;
 }
 
 .image-upload-preview{
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 150px;
   width: 80px;
   height: 80px;
@@ -63,7 +56,7 @@ border: none;
   display: flex;
   justify-content: center;
   align-items: center; 
-   margin-bottom: 1rem;
+   margin-bottom: 35px;
   clip-path: circle(50% at 50% 50%);
 }
 
@@ -74,8 +67,13 @@ border: none;
 }
 
 .register h1 {
-  color: white;
+  font-family: SF Mono;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
   text-align: center;
+  margin-bottom: 0;
 }
 .image-container button {
   border: none;
@@ -87,6 +85,7 @@ border: none;
   font-size: 40px;
   font-weight: 100;
 }
+
 .register input {
   width: 300px;
 height: 40px;
@@ -94,6 +93,11 @@ margin-bottom: 25px;
 background: rgba(255, 255, 255, 0.15);
 border: none;
 padding: 8px 16px 8px 20px;
+color: #fff;
+font-family: SF Pro Text;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
 }
 
 .registration-input {
@@ -107,10 +111,10 @@ padding: 8px 16px 8px 20px;
 .register-button {
   width: 327px;
   height: 56px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #fff;
   margin-bottom: 20px;
   /* margin-left: 21px; */
-  margin-top: 40px;
+  margin-top: 60px;
   border: none;
 }
 
@@ -120,10 +124,10 @@ font-style: normal;
 font-weight: 800;
 font-size: 16px;
 line-height: 19px;
-color: rgba(255, 255, 255, 0.4)
+color: #000
 }
 .artist-photo {
-  margin-top: 20px;
+  margin-top: 70px;
   margin-left: 150px;
   width: 80px;
   height: 80px;
@@ -131,7 +135,7 @@ color: rgba(255, 255, 255, 0.4)
   display: flex;
   justify-content: center;
   align-items: center; 
-   margin-bottom: 1rem;
+   margin-bottom: 20px;
   clip-path: circle(50% at 50% 50%);
 } 
 
@@ -142,26 +146,732 @@ font-weight: 800;
 font-size: 28px;
 line-height: 33px;
 text-align: center;
-
-color: #FFFFFF;
+margin-top: 0;
+/* color: #FFFFFF; */
 }
 
 .start {
-  /* font-family: SF Compact Text; */
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 150%;
-color: #fff;
+  font-family: SF Compact Text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+margin-top: 70px;
 text-align: center;
 letter-spacing: -0.01em;
 width: 258px;
 height: 60px;
-margin-left: 40px;
+margin-left: 60px;
+/* or 30px */
+
+text-align: center;
+letter-spacing: -0.01em;
 }
+
 
 .qr {
   width: 140px;
 height: 140px;
-margin-left: 110px;
+overflow: auto;
+margin-left: 115px;
+background-color: #222;
+/* margin-top: 20px; */
+}
+
+.artist-dashboard span {
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+.share {
+  position: absolute;
+width: 102px;
+height: 40px;
+left: 75px;
+bottom: 80px;
+border: none;
+}
+.print {
+  position: absolute;
+  width: 99px;
+  height: 40px;
+  left: 201px;
+  bottom: 80px;
+  border: none;
+}
+
+.login h2 {
+  font-family: SF Compact Display;
+  /* font-size: 15px; */
+  line-height: 33px;
+  text-align: center;
+  margin-top: 200px;
+font-size: 28px;
+margin-bottom: 48px;
+font-weight: 800;
+}
+
+.login input {
+  width: 300px;
+  color:#fff;
+  margin-left: 20px;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 8px 16px 8px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: SF Pro Text;
+  font-weight: 600;
+}
+
+.login button {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  width: 335px;
+  height: 55px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-left: 22px;
+}
+
+.login h1, .stripe-connect h1, .artist-dashboard h1, .container h1, .tipping-container h1, .extention-header, .stripe h1, .form-header, .success-header{
+  position: absolute;
+  width: 58px;
+  height: 24px;
+left: 159px;
+top: 7px;
+font-family: SF Mono;
+font-style: italic;
+font-weight: 900;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+letter-spacing: -0.125em;
+color: #FFFFFF;
+}
+
+.login span {
+  color: #000;
+  
+}
+::placeholder {
+font-family: SF Pro Text;
+width: 160px;
+height: 19px;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.01em;
+color: rgba(255, 255, 255, 0.5);
+}
+
+::value {
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.stripe-connect, .tipping-container, .tip-extension  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stripe-connect img {
+   margin-top: 70px;
+  margin-left: 90px;
+  width: 80px;
+  height: 80px;
+  /* border: 2px solid rgba(255, 255, 255, 0.15); */
+  /* border-radius: 50%; */
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center;  */
+   margin-bottom: 20px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.user-name {
+ text-align: center;
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 28px;
+line-height: 33px;
+margin-top: 0;
+margin-bottom: 100px ;
+}
+
+.stripe-button p {
+  font-family: SF Compact Text;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  width: 258px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  /* margin-right: 50px; */
+}
+
+.stripe-button button {
+padding: 8px 16px;
+top: 400px;
+position: absolute;
+width: 327px;
+height: 56px;
+left: 24px;
+bottom: 263px;
+background-color: #fff;
+border: none;
+}
+
+.stripe-button span {
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #000000;
+}
+
+.container button {
+  position: absolute;
+width: 70px;
+height: 17px;
+left: 296px;
+top: 20px;
+background-color: none;
+border: none;
+background-color: transparent;
+background-repeat: no-repeat;
+border: none;
+cursor: pointer;
+/* overflow: hidden; */
+outline: none;
+}
+
+.container span {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  
+  text-align: right;
+  
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.photo-artist {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 133px;
+  top: 70px;
+  clip-path: circle(50% at 50% 50%);
+}
+.photo-qr {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 195px;
+  top: 90px;
+}
+
+.container p {
+
+}
+
+.artist-name {
+  position: absolute;
+  width: 150px;
+  height: 33px;
+  left: 110px;
+  top: 165px;
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.tips  {
+position: absolute;
+width: 81px;
+height: 30px;
+left: 25px;
+top: 200px;
+font-family: SF Compact Text;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: -0.01em;
+}
+
+.tip-dashboard ul {
+position: absolute;
+left: -15px;
+top: 250px;
+list-style: none;
+}
+
+.tip {
+  background: rgba(255, 255, 255, 0.15);
+border-radius: 4px;
+width: 327px;
+height: 80px;
+margin-bottom: 15px;
+}
+
+.name-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.name-amount p {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 19px;
+  width: 89px;
+ height: 19px;
+}
+.message-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+.message-time p {
+  font-family: SF Pro Text;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 17px;
+color: rgba(255, 255, 255, 0.6);
+
+}
+
+.amount {
+ color: #76FA76;
+}
+.time {
+  margin-right: 10px;;
+}
+.tipping-container img {
+  margin-top: 70px;
+  /* margin-left: 90px; */
+  width: 80px;
+  height: 80px;
+  display: flex;
+  margin-bottom: 20px;
+  clip-path: circle(50% at 50% 50%);
+  margin-bottom: 0;
+}
+
+.tipping-container p {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  margin-top: 8px;
+}
+ 
+.image-container img {
+  width: 90px;
+  height: 90px;
+}
+
+
+
+.tipping-container .btn {
+  border: 2px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 100px;
+width: 98px;
+height: 56px;
+background-color: #000;
+margin: 10px;
+}
+
+.tipping-container .btn:focus{
+  background-color: #fff;
+ 
+}
+
+.tip-span:hover {
+  color: #000;
+}
+
+
+.tip-span {
+  font-family: SF Mono;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+}
+
+.cintinue {
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+/* .tipping-container span {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  
+  
+  text-align: center;
+
+} */
+/* 
+.tip-button span {
+
+} */
+
+.tipping-container input {
+  margin-top: 10px;
+  width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 8px 16px 8px 20px;
+  color: #fff;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+
+/* Tip Extention */
+
+.extention-amount, .form-amount {
+  position: absolute;
+  /* width: 174px; */
+  height: 24px;
+  left: 100px;
+  top: 100px;
+  font-family: SF Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.extention-img, .form-img  {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  clip-path: circle(50% at 50% 50%);
+  left: 127px;
+  top: 155px; 
+}
+
+
+.extention-name, .form-name {
+position: absolute;
+/* width: 70px; */
+height: 33px;
+left: 179px;
+top: 135px;
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 23px;
+line-height: 33px;
+text-align: center;
+
+}
+
+.extention-container {
+  position: absolute;
+  left: 20px;
+  top: 250px;
+}
+
+.extention-container input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 8px 16px 8px 20px;
+  color: #fff;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.extention-button, .tip-button {
+  position: absolute;
+  width: 327px;
+  height: 56px;
+  background-color: white;
+  font-family: SF Compact Display;
+  margin-top: 145px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border: none;
+  top: 378px;
+}
+
+/* Extention end */
+
+
+
+
+
+
+/* .tip-button {
+  width: 327px;
+  height: 56px;
+
+  background-color: #fff;
+  margin-bottom: 20px;
+
+  margin-top: 100px;
+  border: none;
+} */
+/* 
+.tipping-amount {
+margin-top: 80px;
+font-family: SF Mono;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 0;
+} */
+.tip-extension img {
+  /* display: inline-block; */
+  width: 40px;
+height: 40px;
+margin-top: 0;
+clip-path: circle(50% at 50% 50%);
+
+}
+
+.container-user {
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+ margin-bottom: 40px;
+ margin-left: -70px;
+}
+
+.extension-name {
+  /* display: inline-block; */
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 33px;
+margin-left: 5px;
+/* margin-top: -2px;fd */
+}
+.tip-extension input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 8px 16px 8px 20px;
+  color: #fff;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tip-extension button {
+  width: 327px;
+  height: 56px;
+  background-color: white;
+  font-family: SF Compact Display;
+  margin-top: 145px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border: none;
+}
+.container-user-checkout {
+  flex-direction: row;
+  display: flex;
+ align-items: center;
+ margin-bottom: 40px;
+}
+
+.FormGroup {
+  position: absolute;
+  left: 10px;
+  top: 250px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 327px;
+  /* margin-left: 12px; */
+  height: 30px;
+  border: none;
+  padding-top: 20px;
+}
+
+/*  */
+
+/* .artist-picture {
+position: absolute;
+width: 40px;
+height: 40px;
+left: 130px;
+top: 130px;
+clip-path: circle(50% at 50% 50%);
+} */
+
+.payment-extension {
+  display: flex;
+  flex-direction: row;
+}
+/* .payment-amount {
+  margin-top: 100px;
+font-family: SF Mono;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+position: absolute;
+width: 174px;
+height: 24px;
+left: 100px;
+bottom: 460px;
+} */
+
+.payment-artist {
+  font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 33px;
+position: absolute;
+width: 70px;
+height: 33px;
+left: 180px;
+top: 110px;
+}
+
+.tip-button {
+  width: 327px;
+  height: 56px;
+  background-color: white;
+  font-family: SF Compact Display;
+  margin-top: 150px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border: none;
+}
+
+.end {
+  font-family: SF Compact Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #000000;
+}
+
+.success-btn {
+  position: absolute;
+  width: 102px;
+  height: 40px;
+  left: 135px;
+  bottom: 180px;
+  border: none;
+}
+
+.success-amount {
+position: absolute;
+/* width: 223px; */
+height: 33px;
+left: 75px;
+top: 130px;
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 28px;
+line-height: 33px;
+}
+
+.success-image {
+  width: 80px;
+  height: 80px;
+  clip-path: circle(50% at 50% 50%);
+  position: absolute;
+width: 80px;
+height: 80px;
+left: 148px;
+top: 210px;
+}
+
+.success-name {
+position: absolute;
+/* width: 70px; */
+height: 33px;
+left: 160px;
+top: 280px;
+font-family: SF Compact Display;
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 33px;
 }
