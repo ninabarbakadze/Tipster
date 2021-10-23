@@ -19,9 +19,6 @@ export default function Register({ user, setUser, ...props }) {
   const history = useHistory();
 
 
-
-
-
   function handleUpload() {
     console.log('handleupload fired')
     const storageRef = ref(storage, `/images/${file.name}`);
