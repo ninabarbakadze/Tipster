@@ -7,5 +7,5 @@ Tipster is a PWA for artists to start boosting their income by receiving tips fr
 - Make sure you have postgreSQL installed on your machine mac || windows
 - Run npx nodemon to start the server
 - Adjust the necessary env variables to match your system. Edit your database credentials in Tipster/server/models/model.js. 
-- Generate your own private [I'm an inline-style link with title](https://stripe.com/en-gb-de "Stripe API key").
+- Generate your own private [Stripe API key](https://stripe.com/en-gb-de "Stripe API key").
 - Lastly in your CLI run npm run start to start the front-end.
