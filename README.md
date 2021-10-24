@@ -1,2 +1,11 @@
 # Tipster
 Tipster is a PWA for artists to start boosting their income by receiving tips from their fans. It lets artists sign up/login, connect to stripe in order to receive payments and generate qr code. On the fan side users can scan qr code and send tips/personalized notes to their favorite artists which will appear on Artist's dashboard. The app was engineered and designed by me in a week. 
+
+# Running Tipster
+- Fork & clone this repo
+- npm i to install necessary dependencies
+- Make sure you have postgreSQL installed on your machine mac || windows
+- Run npx nodemon to start the server
+- Adjust the necessary env variables to match your system. Edit your database credentials in Tipster/server/models/model.js. 
+- Generate your own private [I'm an inline-style link with title](https://stripe.com/en-gb-de "Stripe API key").
+- Lastly in your CLI run npm run start to start the front-end.
