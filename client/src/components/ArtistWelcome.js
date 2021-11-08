@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Spinner from './Spinner';
 
 
-export default function ArtistWelcome({ user, setUser }) {
+ const ArtistWelcome = ({ user, setUser }) => {
 
   return (
 
@@ -21,3 +21,4 @@ export default function ArtistWelcome({ user, setUser }) {
     </div >
   );
 }
+export default ArtistWelcome;
