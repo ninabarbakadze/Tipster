@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../App';
 
-export default function Login({ user, setUser }) {
+const Login = ({ user, setUser }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
@@ -13,7 +13,7 @@ export default function Login({ user, setUser }) {
     login({ email })
   }
 
-  function login(user) {
+  const login = (user) => {
     fetch(`http://localhost:4000/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -39,3 +39,4 @@ export default function Login({ user, setUser }) {
     </div>
   )
 }
+export default Login;
