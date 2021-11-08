@@ -14,7 +14,6 @@ export default function Login({ user, setUser }) {
   }
 
   function login(user) {
-    console.log(user);
     fetch(`http://localhost:4000/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -27,7 +26,6 @@ export default function Login({ user, setUser }) {
       })
   }
 
-  console.log('user', user)
 
   return (
     <div className='login'>
