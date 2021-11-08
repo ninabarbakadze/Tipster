@@ -3,7 +3,7 @@ import TipDashboard from './TipDashboard';
 import { Link } from 'react-router-dom';
 import Spinner from './Spinner'
 
-export default function ArtistDashboard ({logOut, user, tips, setTips}) {
+ const ArtistDashboard = ({logOut, user, tips, setTips}) => {
 
   return (
   <div>
@@ -22,7 +22,8 @@ export default function ArtistDashboard ({logOut, user, tips, setTips}) {
    
    <TipDashboard user={user} tips={tips} setTips={setTips}></TipDashboard> 
     </div> : <Spinner /> }
-    </div>
-   
+    </div>  
   )
 }
+
+export default ArtistDashboard
