@@ -9,6 +9,10 @@ The app was engineered and designed by myself in a week.
 
 <img src="./screenshots/Artist 1@2x.png" width="300" ><img src="./screenshots/Artist 2@2x.png" width="300" ><img src="./screenshots/Artist 3@2x.png" width="300" >
 
+# Fan flow
+
+<img src="./screenshots/Fan 1@2x.png" width="300" ><img src="./screenshots/Fan 2@2x.png" width="300" ><img src="./screenshots/Fan 3@2x.png" width="300" >
+
 
 
 
