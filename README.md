@@ -15,12 +15,12 @@ The app was engineered and designed by myself in a week.
 
 ## Tech Stack
 
-:office: [React](https://reactjs.org/) 
-:office: [Sripe](https://stripe.com/en-gb-de) 
-:office: [Express](https://expressjs.com/)  
-:office: [PostgreSQL](https://www.postgresql.org/)  
-:office: [Sequelize](https://sequelize.org/) 
-:office: [Figma](https://www.figma.com/)  
+:office: [React](https://reactjs.org/) <br>
+:office: [Sripe](https://stripe.com/en-gb-de) <br>
+:office: [Express](https://expressjs.com/)  <br>
+:office: [PostgreSQL](https://www.postgresql.org/)  <br>
+:office: [Sequelize](https://sequelize.org/) <br>
+:office: [Figma](https://www.figma.com/)  <br>
 
 
 ## Running Tipster
