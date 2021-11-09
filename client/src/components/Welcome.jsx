@@ -2,8 +2,7 @@ import '../App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Welcome() {
-
+const Welcome = () => {
 
   return (
     <div className="welcome">
@@ -17,4 +16,6 @@ export default function Welcome() {
       </Link>
     </div>
   );
-}
+};
+
+export default Welcome;
