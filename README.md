@@ -3,9 +3,9 @@ Tipster is a PWA for artists enabling them to start receiving tips from their fa
 
 # Artist flow
 
-<img src="./screenshots/Artist 1@2x.png" width="200" >
-<img src="./screenshots/Artist 2@2x.png" width="200" >
-<img src="./screenshots/Artist 3@2x.png" width="200" >
+<img src="./screenshots/Artist 1@2x.png" width="150" >
+<img src="./screenshots/Artist 2@2x.png" width="150" >
+<img src="./screenshots/Artist 3@2x.png" width="150" >
 
 
 # Running Tipster
