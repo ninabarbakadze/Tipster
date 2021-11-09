@@ -1,5 +1,9 @@
 # Tipster
-Tipster is a PWA for artists enabling them to start receiving tips from their fans. It lets artists sign up/login, connect to stripe in order to receive payments and generate qr code. On the fan side users can scan qr code and send tips/personalized notes to their favorite artists which will appear on Artist's dashboard. The app was engineered and designed by me in a week. 
+Tipster is a PWA for artists enabling them to start receiving tips from their fans. It lets artists sign up/login, connect to stripe in order to receive payments and generate qr code. On the fan side users can scan qr code and send tips/personalized notes to their favorite artists which will appear on Artist's dashboard. The app was engineered and designed by me in a week.
+
+# Artist flow
+
+<img src="./screenshots/Artist 1@2x.png" >
 
 # Running Tipster
 - Fork & clone this repo
