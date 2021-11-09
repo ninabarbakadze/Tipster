@@ -2,10 +2,8 @@ const db = require('../models/model');
 const stripe = require('stripe')('sk_test_51JaGGqHCv9NHRvAHaBVrBnS5rnXQlUvBOwXQhwdpYEehXEYzgQmbfKWXaKCLui38ijsKjp0Fkr6gUOMXHc2GgGE400hSXNJe0z');
 
 async function payment (req, res) {
-  console.log('here');
   let { amount, id, artistId } = req.body;
   try {
-    // console.log('in try', stripeId);
     const payment = await stripe.paymentIntents.create({
       amount: amount,
       currency: 'USD',
@@ -30,16 +28,9 @@ async function payment (req, res) {
   }
 }
 
-
-
-// Use JSON parser for all non-webhook routes
-
 async function onboardUser (req, res) {
   try {
-    //get the id of our current user
     const id = req.body.id;
-    console.log(id);
-    //find user in the database
     const user = await db.User.findOne({
       where: {
         id: id
@@ -51,11 +42,9 @@ async function onboardUser (req, res) {
     const origin = `${req.headers.origin}`;
     const accountLinkURL = await generateAccountLink(account.id, origin);
     console.log(account.id);
-    //add the account id to the user in db
     await user.update({ stripeId: account.id });
     res.send({ url: accountLinkURL });
   } catch (err) {
-    console.log(err);
     res.status(500).send({
       error: err.message
     });
@@ -70,11 +59,9 @@ async function userRefresh (req, res) {
   try {
     const { accountID } = req.session;
     const origin = `${req.secure ? 'https://' : 'https://'}${req.headers.host}`;
-
     const accountLinkURL = await generateAccountLink(accountID, origin);
     res.redirect(accountLinkURL);
   } catch (err) {
-
     res.status(500).send({
       error: err.message
     });
