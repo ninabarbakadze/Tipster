@@ -3,7 +3,7 @@ Tipster is a PWA for artists enabling them to start receiving tips from their fa
 
 # Artist flow
 
-<img src="./screenshots/Artist 1@2x.png" >
+<img src="./screenshots/Artist 1@2x.png" width="200" >
 
 # Running Tipster
 - Fork & clone this repo
