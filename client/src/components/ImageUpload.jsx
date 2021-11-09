@@ -2,27 +2,22 @@ import '../App.css';
 import React, { useState, useRef } from 'react';
 import { Button } from 'react-bootstrap';
 
-
-
-
-export default function ImageUpload({ setFile }) {
+const ImageUpload = ({ setFile }) => {
   const [url, setUrl] = useState();
   const filePickerRef = useRef();
 
-
-  function pickedHandler(event) {
-
+  const pickedHandler = (event) => {
     if (event.target.files && event.target.files.length === 1) {
-      const pickedFile = event.target.files[0]
+      const pickedFile = event.target.files[0];
       const pickedFileUrl = URL.createObjectURL(pickedFile);
-      setUrl(pickedFileUrl)
-      setFile(pickedFile)
+      setUrl(pickedFileUrl);
+      setFile(pickedFile);
     }
-  }
+  };
 
-  function pickedImageHandler() {
+  const pickedImageHandler = () => {
     filePickerRef.current.click();
-  }
+  };
 
   return (
     <div className="image-container">
@@ -39,4 +34,6 @@ export default function ImageUpload({ setFile }) {
       </div>
     </div>
   );
-}
+};
+
+export default ImageUpload;
