@@ -7,7 +7,6 @@ async function tip (req, res) {
     res.json(tip);
     res.status = 201;
   } catch (err) {
-    console.log(err);
     res.status(500);
     res.send({ err: err });
   }
@@ -22,7 +21,6 @@ async function getTips (req, res) {
     });
     tipObject ? res.json(tipObject) : 'No tips yet';
   } catch (err) {
-    console.log(err);
     res.status(500);
     res.send({ err: err });
   }
