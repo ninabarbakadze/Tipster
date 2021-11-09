@@ -15,18 +15,12 @@ The app was engineered and designed by myself in a week.
 
 ## Tech Stack
 
-:office: [React](https://reactnative.dev/)  
-:office: [Typescript](https://www.typescriptlang.org/)  
-:office: [Expo](https://expo.io/)  
-:office: [Redux](https://redux.js.org/)  
-:office: [Auth0](https://auth0.com/)  
+:office: [React](https://reactjs.org/) 
+:office: [Sripe](https://stripe.com/en-gb-de) 
 :office: [Express](https://expressjs.com/)  
 :office: [PostgreSQL](https://www.postgresql.org/)  
-:office: [Sequelize](https://sequelize.org/)  
-:office: [Heroku](https://www.heroku.com/)  
-:office: [Lottie](https://airbnb.io/lottie/#/)  
-:office: [Untappd API](https://untappd.com/home)  
-:office: [Google Places API](https://cloud.google.com/maps-platform/places)
+:office: [Sequelize](https://sequelize.org/) 
+:office: [Figma](https://www.figma.com/)  
 
 
 ## Running Tipster
