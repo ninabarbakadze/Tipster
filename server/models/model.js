@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
-// const Tip = require('./tips.model');
 
 const config = {
   host: 'localhost',
@@ -10,9 +9,7 @@ const config = {
 };
 
 const sequelize = new Sequelize('tipster', 'postgres', 'ninako', config);
-
 const db = {};
-
 const files = fs.readdirSync(__dirname);
 
 for (const file of files) {
@@ -24,7 +21,6 @@ for (const file of files) {
 
 db.User.hasMany(db.Tip, { as: 'tips' });
 db.Tip.belongsTo(db.User);
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
