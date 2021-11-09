@@ -17,6 +17,6 @@ import Spinner from './Spinner';
       </> : <Spinner />}
     </div >
   );
-}
+};
  
 export default ArtistWelcome;
