@@ -1,5 +1,5 @@
 import '../App.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Spinner from './Spinner';
 
  const ArtistWelcome = ({ user, setUser }) => {
