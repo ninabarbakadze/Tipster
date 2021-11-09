@@ -10,7 +10,7 @@ const TipExtension = ({ tip, user, message, setMessage }) => {
     history.push('/tip');
   };
 
-  function createTip() {
+  const createTip => () {
     fetch('http://localhost:4000/tip', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
